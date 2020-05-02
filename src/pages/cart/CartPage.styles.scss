@@ -1,0 +1,123 @@
+.cart-bg {
+    background: #efefef;
+  }
+
+  .cart-wrapper {
+    padding: 16px;
+    margin-bottom: 25px;
+
+    .cart-list {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 12px;
+      border: 1px solid #000;
+      padding: 16px;
+      align-items: center;
+      background: #fff;
+
+      .item-summary {
+        .name {
+          margin-bottom: 8px;
+        }
+
+        .price-info {
+          display: flex;
+
+          p {
+            margin-right: 8px;
+          }
+
+          .earlier-price {
+            text-decoration: line-through;
+            color: #898888;
+          }
+
+          .item-disc {
+            color: #07c727;
+          }
+        }
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .item-count {
+        display: flex;
+
+        p {
+          margin: 0 8px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+
+        input {
+          max-width: 25px;
+          text-align: center;
+        }
+      }
+    }
+
+    .total-amt {
+      text-align: right;
+    }
+
+    .close-cart {
+      float: right;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .cart-detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .prod-summary {
+        width: 700px
+      }
+
+      .total-section {
+        background-color: #fff;
+        padding: 16px;
+        border: 1px solid #000;
+        width: 200px;
+
+        .price-detail {
+          border-bottom: 1px solid #bcbcbc;
+          padding-bottom: 8px;
+          margin-bottom: 8px;
+          color: #9f9f9f;
+          font-weight: bold;
+        }
+
+        .price-summary {
+          display: flex;
+          justify-content: space-between;
+          margin: 12px 0;
+
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(41, 41, 206);
+    color: white;
+    text-align: center;
+    p{
+      margin-top: 5px;
+    }
+  }
+
+  .fa-plus, .fa-minus{
+    margin-top: 7px;
+  }

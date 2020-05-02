@@ -1,0 +1,38 @@
+.search-wrapper {
+    background-color: rgb(41, 41, 206);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 48px;
+    color: #fff;
+    align-items: center;
+
+    .home-icon {
+      font-size: 24px;
+    }
+
+    .top-menu-control {
+      display: flex;
+    }
+
+    input {
+      margin-right: 8px;
+    }
+
+    .search-icon{
+      margin-right: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+  }
+
+    .cart-value {
+      padding: 0px 5px;
+      background-color: red;
+      border-radius: 50%;
+      color: #fff;
+      margin-bottom: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+}

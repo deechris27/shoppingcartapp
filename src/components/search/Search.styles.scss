@@ -1,0 +1,23 @@
+.search {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+
+    &:focus{
+      background: transparent;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid white;
+      color: white;
+    }
+
+    &::placeholder{
+      color: white;
+    }
+  }
+
+  .form-inline{
+    display: contents;
+  }

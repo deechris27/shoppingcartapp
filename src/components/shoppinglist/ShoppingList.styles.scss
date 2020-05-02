@@ -1,0 +1,52 @@
+.shopping-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 215px));
+    grid-column-gap: 30px;
+    grid-row-gap: 32px;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .item {
+
+      .item-picture {
+        width: 100%;
+      }
+
+      .price {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+
+        .new-price {
+          font-weight: bold;
+        }
+
+        .old-price {
+          text-decoration: line-through;
+          color: #898888;
+        }
+
+        .discount {
+          color: #07c727;
+          font-weight: bold;
+        }
+      }
+
+      .add-button-wrapper {
+        display: flex;
+        justify-content: center;
+
+        button {
+          border: none;
+          background-color: #f1bc51;
+          padding: 8px 8px;
+          border-radius: 16px;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+}

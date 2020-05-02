@@ -1,0 +1,23 @@
+.sort-wrapper {
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+
+    .sort-text {
+      font-weight: bold;
+    }
+
+    .sort {
+      color: #333232;
+      margin: 0 16px;
+
+      &.active {
+        color: #577fda;
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
