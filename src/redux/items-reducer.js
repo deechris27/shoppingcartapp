@@ -19,7 +19,7 @@ const ItemsReducer = (state=initialState, action)=> {
                  count: localStorage.getItem("count")
              }
           case 'SEARCH':
-              const newItems = Number.isInteger(action.payload) ? state.items : state.items.filter(item => item.name.toLowerCase().includes(action.payload.toLowerCase()));
+              const newItems = Number.isInteger(action.payload) ? JSON.parse(localStorage.getItem("mainState")) : state.items.filter(item => item.name.toLowerCase().includes(action.payload.toLowerCase()));
               return {
                   ...state,
                   items: newItems
