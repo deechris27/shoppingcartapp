@@ -1,5 +1,5 @@
 import {CART_DATA} from '../pages/shop/CartData';
-import {updateItems, decreaseItems, increaseItems} from './actions/updateActions';
+import {updateItems, decreaseItems, increaseItems, addToCart} from './actions/updateActions';
 import {sortPriceLowHigh, sortPriceHighLow, sortByDiscount} from './actions/sortActions';
 import {applyRangeFilter} from './actions/filterActions';
 
@@ -13,14 +13,13 @@ const initialState = {
 const ItemsReducer = (state=initialState, action)=> {
      switch(action.type){
          case 'ADD_TO_CART':
-             const newCart = state.cart;
              return {
                  ...state,
-                 cart:  [...newCart, state.items[action.payload]],
-                 count: state.count + 1
+                 cart: [...addToCart(state, action.payload)],
+                 count: localStorage.getItem("count")
              }
           case 'SEARCH':
-              const newItems = state.items.filter(item => item.name.toLowerCase().includes(action.payload));
+              const newItems = Number.isInteger(action.payload) ? state.items : state.items.filter(item => item.name.toLowerCase().includes(action.payload.toLowerCase()));
               return {
                   ...state,
                   items: newItems
@@ -28,17 +27,20 @@ const ItemsReducer = (state=initialState, action)=> {
           case 'INCREASE':
               return {
                   ...state,
-                  cart: [...increaseItems(state, action.payload)]
+                  cart: [...increaseItems(state, action.payload)],
+                  count: localStorage.getItem("count")
               }
           case 'DECREASE':
               return {
                   ...state,
-                  cart: [...decreaseItems(state, action.payload)]
+                  cart: [...decreaseItems(state, action.payload)],
+                  count: localStorage.getItem("count")
               }
           case 'REMOVE_ITEM':
               return {
                   ...state,
-                  cart: [...updateItems(state, action.payload)]
+                  cart: [...updateItems(state, action.payload)],
+                  count: localStorage.getItem("count")
               }
           case 'HIGH_TO_LOW':
               return {

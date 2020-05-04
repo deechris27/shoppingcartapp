@@ -2,10 +2,11 @@ import React from 'react';
 import './HomePage.styles.scss';
 import { Link } from 'react-router-dom';
 import Header from '../../components/header/Header.Component';
+import {connect} from 'react-redux';
 
-const HomePage = () => (
+const HomePage = ({count}) => (
     <div className="homepage">
-        <Header />
+        <Header count={count}/>
         <p>Dummy Home Page....</p>
         <hr />
         <Link to="/shop">Go to Shop Page</Link>
@@ -15,4 +16,8 @@ const HomePage = () => (
     </div>
 );
 
-export default HomePage;
+const mapStateToProps = state => ({
+    count: state.itemsReducer.count
+});
+
+export default connect(mapStateToProps,null)(HomePage);

@@ -26,6 +26,7 @@ const Filter = ({filterByRange}) => {
             </div>
 
             <button onClick={()=>filterByRange(minRange, maxRange)}>Apply</button>
+            <button onClick={()=>filterByRange(0, "100000")}>Clear</button>
           
         </div>
     )

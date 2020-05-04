@@ -7,7 +7,8 @@ export const CART_DATA = {
                 "actual": 13999,
                 "display": 22500
             },
-            "discount": 37
+            "discount": 37,
+            "itemcount": 1
         },
         {
             "name": "Samsung Super 6",
@@ -16,7 +17,8 @@ export const CART_DATA = {
                 "actual": 35999,
                 "display": 66900
             },
-            "discount": 46
+            "discount": 46,
+            "itemcount": 1
         },
         {
             "name": "Samsung The Frame",
@@ -25,7 +27,8 @@ export const CART_DATA = {
                 "actual": 84999,
                 "display": 133900
             },
-            "discount": 36
+            "discount": 36,
+            "itemcount": 1
         },
         {
             "name": "Thomson B9 Pro",
@@ -34,7 +37,8 @@ export const CART_DATA = {
                 "actual": 9999,
                 "display": 16999
             },
-            "discount": 41
+            "discount": 41,
+            "itemcount": 1
         },
         {
             "name": "LG Ultra HD",
@@ -43,7 +47,8 @@ export const CART_DATA = {
                 "actual": 39990,
                 "display": 79990
             },
-            "discount": 50
+            "discount": 50,
+            "itemcount": 1
         },
         {
             "name": "Vu Ready LED TV",
@@ -52,7 +57,8 @@ export const CART_DATA = {
                 "actual": 7999,
                 "display": 17000
             },
-            "discount": 52
+            "discount": 52,
+            "itemcount": 1
         },
         {
             "name": "Koryo Android TV",
@@ -61,7 +67,8 @@ export const CART_DATA = {
                 "actual": 55999,
                 "display": 199990
             },
-            "discount": 71
+            "discount": 71,
+            "itemcount": 1
         },
         {
             "name": "Micromax LED Smart",
@@ -70,7 +77,8 @@ export const CART_DATA = {
                 "actual": 9999,
                 "display": 27990
             },
-            "discount": 64
+            "discount": 64,
+            "itemcount": 1
         }
     ]
 };

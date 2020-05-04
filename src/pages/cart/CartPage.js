@@ -12,10 +12,10 @@ const Cart = ({ cartCount, cartItems, increaseCount, decreaseCount, removeItem }
     let discount = 0;
     let actual = 0;
 
-    let itemCount;
+    let itemCount1;
 
     cartItems.forEach((i, idx) => {
-        itemCount = cartItems.reduce(function(acc, item) {
+        itemCount1 = cartItems.reduce(function(acc, item) {
             return acc + (item === i);
         }, 0);
         discount = ((i.price.display - i.price.actual) * cartCount) + discount;
@@ -24,7 +24,7 @@ const Cart = ({ cartCount, cartItems, increaseCount, decreaseCount, removeItem }
 
     return (
         <React.Fragment>
-            <Header />
+            <Header count={cartCount}/>
             <div className="cart-bg">
                 <div className="cart-wrapper">
                     <div className="cart-detail">
@@ -45,9 +45,9 @@ const Cart = ({ cartCount, cartItems, increaseCount, decreaseCount, removeItem }
                                                 </div>
                                             </div>
                                             <div className="item-count">
-                                                <p onClick={() => decreaseCount(index)} className="fa-plus"><FontAwesomeIcon icon={faMinus} /></p>
-                                                <input readOnly value={itemCount} />
-                                                <p onClick={() => increaseCount(index)} className="fa-minus"><FontAwesomeIcon icon={faPlus} /></p>
+                                                <p onClick={() => decreaseCount(index)} className="fa-minus"><FontAwesomeIcon icon={faMinus} /></p>
+                                                <input readOnly value={cartItems[index].itemcount} />
+                                                <p onClick={() => increaseCount(index)} className="fa-plus"><FontAwesomeIcon icon={faPlus} /></p>
                                             </div>
                                             <button onClick={() => removeItem(index)}>Remove</button>
                                         </div>
@@ -82,7 +82,7 @@ const Cart = ({ cartCount, cartItems, increaseCount, decreaseCount, removeItem }
 
 const mapStateToProps = state => ({
     cartItems: state.itemsReducer.cart,
-    cartCount: state.itemsReducer.count
+    cartCount: state.itemsReducer.count,
 });
 
 const mapDispatchToProps = dispatch => ({
